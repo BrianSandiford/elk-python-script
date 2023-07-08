@@ -1,5 +1,9 @@
 import requests
+import time
+from urllib.parse import urljoin
 
+base_url = 'http://18.216.212.47:5601'
+endpoint = ''
 headers = {
     'kbn-xsrf': 'true',
 }
@@ -14,13 +18,36 @@ response = requests.post(
     headers=headers,
     auth=('elastic', ''),
 )
-
-
 if response.status_code == 200:
     json_response = response.json()
-    print(json_response)
+    print(type(json_response['path']))
+    test = str(json_response['path'])
+    endpoint = test.strip()
+    #endpoint = json_response['path']
+    endpoint = '/api/reporting/jobs/download/lju9qap800ry3512ad8xoj4b'
+    print(endpoint)
+    print(type(endpoint))
+    #full_URL = urljoin(base_url, endpoint)
+    #full_URL = base_url+endpoint
+    #print(full_URL)
+    '''
+    response1 = requests.get(full_URL)
+    with open('outputpi4.csv', 'wb') as f:
+        f.write(response1.content)
+    '''
+    
 else:
     print('Failed to retrieve the JSON response. Status code:', response.status_code)
+
+
+print(endpoint)
+full_URL = base_url+endpoint
+#full_URL = 'http://18.216.212.47:5601/api/reporting/jobs/download/lju8s6am00ry3512ad8ox8nk'
+print(full_URL)
+response1 = requests.get(full_URL)
+with open('outputpi2.csv', 'wb') as f:
+    f.write(response1.content)
+
 
 '''
 import requests
