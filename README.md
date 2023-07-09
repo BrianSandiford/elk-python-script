@@ -14,6 +14,11 @@ This is a Python script that generates and downloads a CSV report from a remote 
    ```shell
    pip install requests
    ```
+3. Create a virtual environment: `python3 -m venv myenv`
+4. Activate the virtual environment:
+   - For Windows: `myenv\Scripts\activate`
+   - For macOS/Linux: `source myenv/bin/activate`
+5. Install the required dependencies: `pip install -r requirements.txt`
 
 Usage
 
@@ -26,3 +31,7 @@ Usage
 
 3. Save the modifications.
 4. Run the script using the following command:
+
+`python script_name.py`
+
+Please note that you should replace `script_name.py` with the actual name of your Python script file. Also, make sure to include the necessary license information by providing a LICENSE file or specifying the appropriate license in the README.
