@@ -1,6 +1,7 @@
 # CSV Report Downloader
 
 This is a Python script that generates and downloads a CSV report from a remote server.
+Please refer to elastic documentation for generating reports [here](https://www.elastic.co/guide/en/kibana/current/automating-report-generation.html)
 
 ## Prerequisites
 
