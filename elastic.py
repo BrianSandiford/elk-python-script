@@ -11,7 +11,7 @@ params = {
 }
 
 # Make a POST request to return endpoint of a CSV report.
-#Endpoint contained in path field of the JSON response
+#Endpoint contained in path field of the JSON response.
 response = requests.post(
     'http://18.216.212.47:5601/api/reporting/generate/csv_searchsource',
     params=params,
@@ -27,8 +27,6 @@ if response.status_code == 200:
     # Construct the full URL by combining the base URL and the endpoint
     full_URL = base_url + endpoint
 
-    # Print the full URL
-    print(full_URL)
 
     # Wait for 5 seconds
     time.sleep(5)
