@@ -10,15 +10,11 @@ This is a Python script that generates and downloads a CSV report from a remote 
 ## Installation
 
 1. Clone the repository or download the script file.
-2. Install the required Python packages by running the following command:
-   ```shell
-   pip install requests
-   ```
-3. Create a virtual environment: `python3 -m venv myenv`
-4. Activate the virtual environment:
+2. Create a virtual environment: `python3 -m venv myenv`
+3. Activate the virtual environment:
    - For Windows: `myenv\Scripts\activate`
    - For macOS/Linux: `source myenv/bin/activate`
-5. Install the required dependencies: `pip install -r requirements.txt`
+4. Install the required dependencies: `pip install -r requirements.txt`
 
 Usage
 
